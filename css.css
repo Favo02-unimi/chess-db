@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: white;
+    background-image: url(src/bg_pattern.png);
+}
+nav {
+    height: 60px;
+    background-image: url(src/dark_menu_bg_pattern.png);
+    border-bottom: 10px solid #F3F2F2;
+    box-shadow: 0px 15px 18px 4px #F3F2F2;
+    transition: padding-left .4s;
+    z-index: 5;
+}
+nav ul {
+    list-style-type: none;
+    margin-left: 20px;
+}
+nav li {
+    float: left;
+    position: relative;
+    margin: 15px 20px 15px 20px;
+    font-weight: 700;
+    font-size: 25px;
+    transition: letter-spacing .4s;
+}
+nav li.active {
+    letter-spacing: 1px;
+}
+nav li:hover {
+    letter-spacing: 1px;
+    transition: letter-spacing .4s;
+}
+nav li.right {
+    float: right;
+    margin-right: 30px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 23px;
+    transition: letter-spacing .4s;
+}
+nav li.right:hover {
+    letter-spacing: 0px;
+    transition: letter-spacing .4s;
+}
+nav.sticky li.right {
+    margin-right: 70px;
+    transition: margin-right .4s, letter-spacing .4s;
+}
+nav li.active::after {
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 0;
+	height: 0;
+	border-left: 9px solid transparent;
+	border-right: 9px solid transparent;
+    border-bottom: 10px solid white;
+}
+nav li.active::before {
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 50px;
+    height: 3px;
+    background-color: white;
+}
+nav li.right.active::after {
+    bottom: -16px;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+}
+header div.logo, header a.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    height: 80px;
+    color: #505050;
+    text-decoration: none;
+}
+header #logo {
+    margin-top: -10px;
+    font-size: 40px;
+    margin-right: 10px;
+    z-index: 10;
+}
+nav.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-left: 40px;
+    transition: padding-left .4s;
+}
+main.sticky {
+    margin-top: 85px;
+}
+#logo.sticky {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    animation: logoSlide .4s;
+    color: white;
+}
+main {
+    margin-top: 15px;
+    color: #505050;
+    border-top: 10px solid transparent;
+}
+@keyframes logoSlide {
+    from {
+        left: -50px;
+    }
+    to {
+        left: 20px;
+    }
+}
+footer {
+    margin-top: 200px;
+    height: 200px;
+    width: 100%;
+    background-image: url(src/dark_menu_bg_pattern.png);
+    position: relative;
+    color: white;
+}
+div.footer-left {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+}
+footer i {
+    font-size: 45px;
+    margin-top: -10px;
+}
+footer h1 {
+    font-size: 35px;
+    margin-left: 10px;
+}
+div.footer-right {
+    width: 60%;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+footer td.center {
+    text-align: center;
+}
+footer td {
+    margin-bottom: 10px;
+    text-align: center;
+    margin-right: 20px;
+}
+footer p {
+    font-size: 15px;
+}
+footer table {
+    width: 100%;
+    text-align: right;
+}
+footer a.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    height: 80px;
+    text-decoration: none;
+}
+footer a {
+    color: white;
+    transition: color .4s;
+}
+footer a:hover {
+    color: #E7C468;
+    transition: color .4s;
+}
+footer ul {
+    height: 100%;
+    text-align: right;
+}
+footer li {
+    list-style-type: none;
+}
+footer h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+footer div.list {
+    height: 65%;
+    margin-left: 100px;
+}
+
+/* ANIMAZIONI*/
+.animation {
+    opacity: 0 !important;
+}
+.animation.slideRight,
+.animation.slideLeft {
+    opacity: 1 !important;
+}
+.slideRight {
+    animation: slideRight 2s;
+}
+.slideLeft {
+    animation: slideLeft 2s;
+}
+i.mobile {
+    opacity: 0;
+    display: none;
+}
+@keyframes slideRight {
+    from {
+        position: relative;
+        opacity: 0;
+        left: -50vw;
+    }
+    to {
+        position: relative;
+        opacity: 1;
+        left: 0vw;
+    }
+}
+@keyframes slideLeft {
+    from {
+        position: relative;
+        opacity: 0;
+        right: -50vw;
+    }
+    to {
+        position: relative;
+        opacity: 1;
+        right: 0vw;
+    }
+}
+
+.animationFade {
+    animation: fadeIn 2s;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.7, 0.7);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@media screen and (max-width:1100px) {
+    nav ul {
+        position: absolute;
+        z-index: 5;
+        width: 250px;
+        border: 2px solid #505050;
+        top: 80px;
+        right: 95px;
+    }
+    nav ul.mobileHidden {
+        display: none;
+    }
+    nav li {
+        float: none;
+        padding: 15px 20px;
+        margin: 0;
+        background: white;
+    }
+    nav li a {
+        color: #505050;
+    }
+    nav li.right {
+        float: none;
+        display: none;
+    }
+    nav li.active::before {
+        content: none;
+    }
+    nav li.active::after {
+        content: none;
+    }
+    i.mobile {
+        opacity: 1;
+        display: inline-block;
+        color: white;
+        font-size: 20px;
+        position: absolute;
+    }
+    i.mAccount {
+        top: 100px;
+        right: 15px;
+    }
+    i.mMenu {
+        top: 100px;
+        right: 65px;
+    }
+    i.mLogo {
+        top: 90px;
+        left: 25px;
+        font-size: 35px;
+    }
+    footer {
+        height: 400px;
+        margin-top: 100px;
+    }
+    div.footer-left {
+        height: 50%;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+    div.footer-right {
+        height: 50%;
+        width: 100%;
+        position: absolute;
+    }
+    footer ul {
+        text-align: center;
+    }
+    footer div.list {
+        margin: 0 50px;
+    }
+} 

@@ -1,0 +1,296 @@
+/* PARTE INIZIALE WELCOME */
+section.welcome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+section.welcome h1 {
+    max-width: 35%;
+    text-align: right;
+    display: inline-block;
+    font-size: 60px;
+    margin-top: -10vh;
+    animation: welcomeLeftIn 4s;
+    color: black;
+    text-shadow: 3px 3px 0px rgb(210, 173, 85, 0.8),
+            14px 14px 10px rgb(0, 0, 0, 0.15),
+            15px 15px 2px rgb(0, 0, 0, 0.1),
+            25px 25px 30px rgb(0, 0, 0, 0.1);
+}
+section.welcome .highlight {
+    text-shadow: 3px 3px 0px rgb(182, 134, 72, 0.8),
+            14px 14px 10px rgb(0, 0, 0, 0.15),
+            15px 15px 2px rgb(0, 0, 0, 0.1),
+            25px 25px 30px rgb(0, 0, 0, 0.1);
+}
+section.welcome img {
+    display: inline-block;
+    max-width: 40%;
+    margin-top: -10vh;
+    animation: welcomeRightIn 2.5s;
+    filter: drop-shadow(5px 5px 5px #222222);
+}
+/* ANIMAZIONE WELCOME */
+@keyframes welcomeLeftIn {
+    from {
+        position: relative;
+        opacity: 0;
+        left: -50vw;
+        text-shadow: none;
+    }
+    to {
+        position: relative;
+        opacity: 1;
+        left: 0vw;
+        text-shadow: 3px 3px 0px rgb(210, 173, 85, 0.8),
+        14px 14px 10px rgb(0, 0, 0, 0.15),
+        15px 15px 2px rgb(0, 0, 0, 0.1),
+        25px 25px 30px rgb(0, 0, 0, 0.1);
+    }
+}
+@keyframes welcomeRightIn {
+    from {
+        max-width: 5%;
+        position: relative;
+        opacity: 0;
+        right: -50vw;
+    }
+    to {
+        max-width: 40%;
+        opacity: 1;
+        position: relative;
+        right: 0vw;
+    }
+}
+
+/* DIVIDER */
+.dividerOpen {
+    width:100%;
+    height:100px;
+    position:absolute;
+    left:0px;
+    background: linear-gradient(to left bottom, transparent 49%, #505050 50%);
+}
+.dividerClose {
+    width:100%;
+    height:100px;
+    position:absolute;
+    left:0px;
+    background: linear-gradient(to right bottom, #505050 49%, transparent 50%),    linear-gradient(-50deg, transparent 16px, transparent 0);
+}
+.dividerOpenOpposite {
+    width:100%;
+    height:100px;
+    position:absolute;
+    left:0px;
+    background: linear-gradient(to right bottom, transparent 49%, #505050 50%);
+}
+.dividerCloseOpposite {
+    width:100%;
+    height:100px;
+    position:absolute;
+    left:0px;
+    background: linear-gradient(to left bottom, #505050 49%, transparent 50%),    linear-gradient(-50deg, transparent 16px, transparent 0);
+}
+
+/* SEZIONE SERVIZI */
+section.services {
+    margin-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    background: #505050;
+    color: white;
+}
+section.services h1 {
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 70px;
+    text-shadow: 3px 3px 0px #B6854A,
+        14px 14px 10px rgb(0, 0, 0, 0.15),
+        15px 15px 2px rgb(0, 0, 0, 0.1),
+        25px 25px 30px rgb(0, 0, 0, 0.1);
+}
+section.services li {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    margin-top: 40px;
+}
+section.services li.more {
+    margin-top: 5px;
+    font-size: 15px;
+    text-decoration: underline;
+}
+section.services li.more a:hover {
+    color: #E7C468;
+}
+section.services a {
+    color: white;
+    text-decoration: none;
+    transition: color .4s;
+}
+section.services a:hover {
+    color: #B6854A;
+    transition: color .4s;
+}
+section.services a:hover i{
+    color: #B6854A;
+    transition: color .4s, font-size .4s;
+    font-size: 45px;
+    margin-bottom: -5px;
+}
+section.services i {
+    margin-right: 10px;
+    font-size: 40px;
+    transition: color .4s, font-size .4s;
+}
+
+/* SEZIONI */
+section.players,
+section.analyse {
+    margin-top: 200px;
+    margin-bottom: 100px;
+    color: #505050;
+}
+section.matches {
+    margin-top: 200px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: #505050;
+    color: white;
+}
+/* TITOLI SEZIONI */
+section.players h1,
+section.analyse h1,
+section.players h1 a,
+section.analyse h1 a {
+    text-decoration: none;
+    color: #505050;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 70px;
+    text-shadow: 3px 3px 0px #E7C468,
+        14px 14px 10px rgb(0, 0, 0, 0.15),
+        15px 15px 2px rgb(0, 0, 0, 0.1),
+        25px 25px 30px rgb(0, 0, 0, 0.1);
+}
+section.matches h1,
+section.matches h1 a {
+    text-decoration: none;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 70px;
+    text-shadow: 3px 3px 0px #B6854A,
+        14px 14px 10px rgb(0, 0, 0, 0.15),
+        15px 15px 2px rgb(0, 0, 0, 0.1),
+        25px 25px 30px rgb(0, 0, 0, 0.1);
+}
+/* PARAGRAFI SEZIONI */
+section.players p,
+section.analyse p {
+    font-size: 30px;
+    font-weight: 600;
+    max-width: 30%;
+    text-align: right;
+}
+section.matches p {
+    font-size: 30px;
+    font-weight: 600;
+    max-width: 30%;
+    text-align: left;
+    color: white;
+}
+/* IMMAGINI SEZIONI */
+section.players img,
+section.analyse img {
+    margin-left: 5%;
+    width: 25%;
+}
+section.matches img {
+    margin-right: 5%;
+    width: 25%;
+}
+/* LINK SEZIONI */
+section h3 {
+    margin-top: 80px;
+    text-align: center;
+    font-size: 20px;
+}
+section h3 a {
+    color: inherit;
+    text-decoration: none;
+    transition: color .4s;
+}
+section h3 a:hover {
+    color: #B6854A;
+    text-decoration: underline;
+    transition: color .4s;
+}
+section h3 a i {
+    font-size: 15px;
+}
+
+@media screen and (max-width:1100px) {
+    section.welcome {
+        flex-direction: column;    
+        height: 100vh;
+    }
+    section.welcome h1 {
+        max-width: 90%;
+        text-align: center;
+        font-size: 50px;
+    }
+    section.welcome img {
+        max-width: 70%;
+        margin-top: 30px
+    }
+    @keyframes welcomeRightIn {
+        from {
+            max-width: 5%;
+            position: relative;
+            opacity: 0;
+            right: -50vw;
+        }
+        to {
+            max-width: 70%;
+            opacity: 1;
+            position: relative;
+            right: 0vw;
+        }
+    }
+    section.services h1 {
+        font-size: 50px;
+    }
+    section.services li {
+        font-size: 30px;
+    }
+    div.flex {
+        flex-direction: column;
+    }
+    section.players p,
+    section.matches p,
+    section.analyse p {
+        font-size: 25px;
+        font-weight: 600;
+        max-width: 80%;
+        text-align: center;
+    }
+    section.players img,
+    section.matches img,
+    section.analyse img {
+        margin-left: 0;
+        width: 50%;
+    }
+    section h3 {
+        margin-top: 30px;
+    }
+    section.matches div.flex {
+        flex-direction: column-reverse;    
+
+    }
+}

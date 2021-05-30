@@ -1,0 +1,204 @@
+div.info {
+    width: 40%;
+    margin-left: 10%;
+    animation: text 2s;
+}
+div.photo {
+    width: 30%;
+    margin-right: 10%;
+    text-align: center;
+    animation: text 2s;
+}
+div.info h1 {
+    display: inline-block;
+    font-size: 60px;
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 0px rgb(210, 173, 85, 0.8),
+            14px 14px 10px rgb(0, 0, 0, 0.15),
+            15px 15px 2px rgb(0, 0, 0, 0.1),
+            25px 25px 30px rgb(0, 0, 0, 0.1);
+}
+div.info i {
+    font-size: 40px;
+    margin-left: 20px;
+    color: rgb(224, 1, 1);
+}
+div.info h2 {
+    font-size: 35px;
+    margin-top: 20px;
+}
+div.info h3 {
+    font-size: 20px;
+}
+div.photo img {
+    object-fit: cover;
+    height: 500px;
+    width: 400px;
+    box-shadow: rgba(0, 0, 0, 0.7) 7px 7px 10px;
+}
+div.chart {
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    height: 30vh;
+}
+div.chart h1,
+div.matches h1 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+div.elo-chart {
+    width: 50%;
+    float: left;
+    margin-bottom: 50px;
+}
+div.rank-chart {
+    width: 50%;
+    float: right;
+    margin-bottom: 50px;
+}
+div.matches {
+    margin-bottom: 50px;
+}
+div.matches h3 {
+    margin-top: 15px;
+    text-align: center;
+}
+div.matches h3 a {
+    color: #505050;
+}
+main table {
+    font-family: 'Source Sans Pro', sans-serif;
+    border-collapse: collapse;
+    width: 75%;
+    margin: auto;
+}
+main table td {
+    padding: 10px;
+    border: none;
+}
+main table td.center {
+    text-align: center;
+}
+main table tr, th {
+    border: 1px solid black;
+    padding: 8px;
+}
+main table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+main table tr:nth-child(odd){
+    background-color: #dddddd;
+}
+main table tr:hover {
+    background-color: #bdbdbd;
+    
+}
+main table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-image: url(src/dark_menu_bg_pattern.png);
+    color: white;
+}
+input[type=submit],
+table button {
+    width: 80%;
+    height: 80%;
+    background-color: #505050;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    margin: auto;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background-color .4s;
+}
+input[type=submit]:hover,
+button:hover {
+    cursor: pointer;
+    background-color: black;
+    text-decoration: underline;
+    transition: background-color .4s;
+}
+i.fa-heart {
+    color: rgb(224, 1, 1);
+}
+
+@keyframes name {
+    from {
+        transform: scale(0.8);
+        opacity: 0.5;
+        text-shadow: none;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+        text-shadow: 3px 3px 0px rgb(210, 173, 85, 0.8),
+        14px 14px 10px rgb(0, 0, 0, 0.15),
+        15px 15px 2px rgb(0, 0, 0, 0.1),
+        25px 25px 30px rgb(0, 0, 0, 0.1);
+    }
+}
+@keyframes text {
+    from {
+        transform: scale(0.7);
+        opacity: 0.5;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes photo {
+    from {
+        transform: scale(0.7);
+        opacity: 0.5;
+        box-shadow: none;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+        box-shadow: rgba(0, 0, 0, 0.7) 7px 7px 10px;
+    }
+}
+h2.goback {
+    text-align: center;
+}
+.goback a {
+    color: #505050;
+}
+
+@media screen and (max-width:1100px) {
+    .flex {
+        flex-direction: column;
+    }
+    div.info {
+        width: 80%;
+        margin: 0;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    div.photo {
+        width: 70%;
+        margin-right: 0;
+    }
+    div.photo img {
+        height: 300px;
+        width: 300px;
+    }
+    div.chart {
+        width: 95%;
+        height: auto;
+    }
+    div.elo-chart,
+    div.rank-chart {
+        width: 100%;
+        float: none;
+    }
+    div.table {
+        overflow-x: auto;
+        margin: 0 10px;
+    }
+}

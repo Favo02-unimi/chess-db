@@ -1,0 +1,163 @@
+div.profile {
+    width: 95%;
+    margin: auto;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+/* ACCOUNT - LEFT */
+div.account {
+    position: relative;
+    width: 30%;
+    padding: 1%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+div.account::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 10%;
+    height: 75%;
+    width: 3px;
+    border-right: 3px solid #505050;
+}
+div.account h1 {
+    font-size: 3em;
+}
+div.account h2 {
+    font-size: 1.5em;
+}
+div.account h3 {
+    margin-top: 15px;
+    font-size: 1.2em;
+}
+div.buttons {
+    margin-top: 30px;
+}
+div.buttons h2 {
+    margin: 15px;
+    padding: 10px 20px;
+    border: 1px solid #505050;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    transition: background .4s, color .4s;
+    color: #505050;
+    width: 150px;
+    display: inline-block;
+    background: rgba(201, 201, 201, 0.6);
+}
+div.buttons a {
+    text-decoration: none;
+    color: #505050;
+}
+div.delete h2 {
+    background: rgb(255, 0, 0, 0.6);
+    width: 200px;
+}
+div.delete h2:hover {
+    text-decoration: underline;
+    color: black;
+    background: red;
+    transition: background .4s, color .4s;
+}
+div.edit h2:hover {
+    text-decoration: underline;
+    background: rgb(201, 201, 201);
+    transition: background .4s, color .4s;
+    color: black;
+}
+
+/* PLAYERS - "CENTER" */
+div.players,
+div.matches,
+div.saved {
+    width: 25%;
+    margin: 1%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow-y: auto;
+}
+
+div.players i,
+div.matches i {
+    margin-left: 5px;
+    color: rgb(224, 1, 1);
+}
+div.players i:hover,
+div.matches i:hover {
+    cursor: pointer;
+    color: red;
+}
+
+div.profile form input[type="submit"] {
+    border: none;
+    color: #505050;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+div.profile form input[type="submit"]:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+div.saved button {
+    background-color: #505050;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    margin: auto;
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background-color .4s;
+}
+div.saved button:hover {
+    cursor: pointer;
+    background-color: black;
+    text-decoration: underline;
+    transition: background-color .4s;
+}
+
+@media screen and (max-width:1100px) {
+    div.profile {
+        width: 90%;
+        height: 100vh;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    div.account {
+        width: 80%;
+    }
+    div.account::after {
+        content: none;
+    }
+    div.players,
+    div.matches {
+        width: 80%;
+    }
+    div.buttons {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
